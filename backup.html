@@ -44,30 +44,31 @@
             </ul>
         </section>
     </div>
-    <script>
-        let app = {
-            data() {
-              return {
-                assignments: [
-                    { id: 1, name: 'Learn to install vue', complete: false },
-                    { id: 2, name: 'Lear to use Vue', complete: false },
-                    { id: 3, name: 'Use vue on my new apps', complete: false },
-                ]
-              }
-            },
-
-            computed: {
-                inProgressAssignments () {
-                    return this.assignments.filter((a) => ! a.complete)
-                },
-
-                completedAssignments () {
-                    return this.assignments.filter((a) => a.complete)
-                }
-            }
-          }
-
-        Vue.createApp(app).mount('#app')
-    </script>
 </body>
 </html>
+
+<script>
+    let app = {
+        data() {
+          return {
+            assignments: [
+                { id: 1, name: 'Learn to install vue', complete: false },
+                { id: 2, name: 'Lear to use Vue', complete: false },
+                { id: 3, name: 'Use vue on my new apps', complete: false },
+            ]
+          }
+        },
+
+        computed: {
+            inProgressAssignments () {
+                return this.assignments.filter((a) => ! a.complete)
+            },
+
+            completedAssignments () {
+                return this.assignments.filter((a) => a.complete)
+            }
+        }
+      }
+
+    Vue.createApp(app).mount('#app')
+</script>
